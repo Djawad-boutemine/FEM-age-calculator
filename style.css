@@ -1,0 +1,130 @@
+/* defining the colos */
+:root {
+    --cl-Purple: hsl(259, 100%, 65%);
+    --cl-red: hsl(0, 100%, 67%);
+    --cl-off-white: hsl(0, 0%, 94%);
+    --cl-light-grey: hsl(0, 0%, 86%);
+    --cl-smokey-grey: hsl(0, 1%, 44%);
+    --cl-of-black: hsl(0, 0%, 8%);
+}
+
+/* styling the body */
+body {
+    background-color: var(--cl-off-white) !important;
+}
+
+/* start styling the main container */
+main {
+    background-color: white;
+    border-radius: 1em 1em 6em 1em;
+    @media ( min-width : 789px) {
+        border-radius: 2em 2em 13em 2em ;
+    }
+    width: clamp(20em,80vw,55em);
+}
+
+/* end styling the main container */
+/* start styling the inputs */
+.inputs {
+    & label {
+        color: var(--cl-smokey-grey);
+        letter-spacing: 3px;
+        font-size: clamp(0.6em,4vw,1.2em);
+    }
+    & input {
+        border-color: var(--cl-light-grey);
+        color: var(--cl-of-black);
+        font-size: clamp(1em,5vw,2em);
+    }
+    & input:focus , & input:hover {
+        border-color: var(--cl-Purple);
+        outline: none;
+    }
+}
+.error {
+    & label  {
+        color : var(--cl-red) ;
+    }
+    & input {
+        border-color: var(--cl-red) ;
+    }
+}
+
+/* end styling the inputs */
+/* start styling the separator */
+.separator {
+    & hr {
+        color: transparent;
+        height: 2px;
+        background-color: var(--cl-smokey-grey);
+    }
+
+    & div {
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: var(--cl-Purple);
+    }
+    & div:hover {
+        background-color: black;
+    }
+}
+
+/* start styling the restult */
+.result {
+    font-weight: bold;
+    font-size: clamp(3.5em,10vw,7em);
+    transform: translateY(-0.3em);
+    & div {
+        height: 1em !important;
+    }
+    & span {
+        color: var(--cl-Purple);
+    }
+
+    & p {
+        color: var(--cl-of-black);
+    }
+}
+
+/* end styling the restult */
+
+/* end styling the separator */
+
+/* large screens */
+@media (min-width : 769px) {
+    .inputs {
+        & input {
+            padding: 0.5em 0.5em ;
+        }
+    }
+    /* start styling the separator */
+    .separator {
+        & div {
+            right: 0;
+        }
+    }
+
+    /* end styling the separator */
+}
+
+/* small screens */
+@media (max-width : 768px) {
+    main {
+        transform: translateY(-10em);
+    }
+    .inputs {
+        margin-top: 1em !important;
+        & input {
+            padding: 0.3em 0.4em ;
+        }
+    }
+    /* start styling the separator */
+    .separator {
+        & div {
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    /* end styling the separator */
+}

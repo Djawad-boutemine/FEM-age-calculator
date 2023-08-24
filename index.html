@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FEM-Age-Calcolator</title>
+    <!-- main css file -->
+    <link rel="stylesheet" href="style.css">
+    <!-- the bootstrap file -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- the font awsome file -->
+    <link rel="stylesheet" href="css/all.min.css">
+</head>
+
+<body class="d-grid justify-content-center align-items-center vh-100">
+    <main class="p-md-5 p-3">
+        <div class="inputs row">
+            <div class="days col-4 col-md-3">
+                <label for="day"  class="fw-bold">DAY</label>
+                <br>
+                <input type="text" id="day"  class="w-100 rounded-2 fw-bold" placeholder="DD">
+            </div>
+            <div class="months col-4 col-md-3">
+                <label for="month" class="fw-bold">MONTH</label>
+                <br>
+                <input type="text" id="month" class=" w-100 rounded-2 fw-bold" placeholder="MM">
+            </div>
+            <div class="years col-4 col-md-3">
+                <label for="year" class="fw-bold">YEAR</label>
+                <br>
+                <input type="text" id="year" class=" w-100 rounded-2 fw-bold" placeholder="YYYY">
+            </div>
+        </div>
+        <div class="separator position-relative mt-5 mb-5">
+            <hr>
+            <div class="d-inline-block position-absolute rounded-circle p-2">
+                <img src="icon-arrow.svg" alt="">
+            </div>
+        </div>
+        <div class="result mb-3">
+            <div class="num-years  d-flex "><span>--</span><p class="ms-3">years</p></div>
+            <div class="num-months d-flex "><span>--</span><p class="ms-3">months</p></div>
+            <div class="num-days  d-flex"><span>--</span><p class="ms-3">days</p></div>
+        </div>
+    </main>
+    <!-- main js file -->
+    <script src="main.js" type="module"></script>
+    <!-- the bootstrap file -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- the font awsome file -->
+    <script src="js/all.min.js"></script>
+</body>
+
+</html>
